@@ -6,9 +6,11 @@ const videoGrid = document.getElementById('video-grid') //video ref
 
 //create peer server connection
 const myPeer = new Peer(undefined, {
-    host: '/',
-    port: '3001'
+    host: "mysterious-headland-46020.herokuapp.com",
+    port: "",
+    path: "/peerjs",
 })
+
 const myVideo = document.createElement('video')
 myVideo.muted = true //muting our audio to ourselves
 

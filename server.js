@@ -5,6 +5,14 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const { v4: uuidV4 } = require('uuid')
 
+//to make peerjs compatible with heroku
+var ExpressPeerServer = require("peer").ExpressPeerServer;    
+var options = {
+  debug: true,
+  allow_discovery: true,
+};
+let peerServer = ExpressPeerServer(server, options);
+app.use("/peerjs", peerServer);
 
 //setup the express server
 app.set('view engine', 'ejs');
