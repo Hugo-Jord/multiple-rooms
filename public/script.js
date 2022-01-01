@@ -33,6 +33,7 @@ navigator.mediaDevices.getUserMedia({
         video.style.marginLeft = '100px'
         video.style.marginTop = '10px'
         video.style.left = '55%'
+        video.style.position = 'absolute'
         call.on('stream', userVideoStream => {
             addVideoStream(video, userVideoStream)
         })
@@ -73,6 +74,7 @@ function connectToNewUser(userId, stream) {
     video.style.marginLeft = '100px'
     video.style.marginTop = '10px'
     video.style.left = '55%'
+    video.style.position = 'absolute'
     call.on('stream', userVideoStream => { //when new user, add their video
         addVideoStream(video, userVideoStream)
 
