@@ -31,11 +31,21 @@
             margin-right: auto;
             position: absolute;
         }
+        
+        .pause{
+            display: block; 
+            position: absolute;
+        }
+
+        .unpause{
+            display: none; 
+            position: absolute;
+        }
     </style>
 </head>
 <body>
     <div id="video-grid"></div>
-    <button id="pause" type="button" onclick="pauseVideo()" style="display: block; position: absolute;">Pause</button>
-    <button id="unpause" type="button" onclick="unpauseVideo()" style="display: none; position: absolute;">Resume</button>
+    <button id="pause" type="button" onclick="pauseVideo()">Pause</button>
+    <button id="unpause" type="button" onclick="unpauseVideo()">Resume</button>
 </body>
 </html>

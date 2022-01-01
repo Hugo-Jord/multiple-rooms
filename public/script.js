@@ -28,10 +28,11 @@ navigator.mediaDevices.getUserMedia({
         call.answer(stream)
 
         var video = document.createElement('video')
-        video.style.width = '200px';
-        video.style.height = '200px';
+        video.style.width = '200px'
+        video.style.height = '200px'
         video.style.marginLeft = '100px'
-        video.style.marginTop = '100px'
+        video.style.marginTop = '10px'
+        video.style.left = '55%'
         call.on('stream', userVideoStream => {
             addVideoStream(video, userVideoStream)
         })
@@ -70,7 +71,8 @@ function connectToNewUser(userId, stream) {
     video.style.width = '200px'
     video.style.height = '200px'
     video.style.marginLeft = '100px'
-    video.style.marginTop = '100px'
+    video.style.marginTop = '10px'
+    video.style.left = '55%'
     call.on('stream', userVideoStream => { //when new user, add their video
         addVideoStream(video, userVideoStream)
 
