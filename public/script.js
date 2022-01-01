@@ -13,6 +13,9 @@ const myPeer = new Peer(undefined, {
 })
 const myVideo = document.createElement('video')
 myVideo.muted = true //muting our audio to ourselves
+myVideo.style.width = '200px'
+myVideo.style.height = '200px'
+myVideo.style.left = '10%'
 
 const peers = {}
 const peers_vids = {}
@@ -28,9 +31,6 @@ navigator.mediaDevices.getUserMedia({
         call.answer(stream)
 
         var video = document.createElement('video')
-        video.style.width = '200px'
-        video.style.height = '200px'
-        video.style.left = '10%'
         call.on('stream', userVideoStream => {
             addVideoStream(video, userVideoStream)
         })
@@ -66,9 +66,6 @@ function connectToNewUser(userId, stream) {
     const call = myPeer.call(userId, stream)
 
     const video = document.createElement('video')
-    video.style.width = '200px'
-    video.style.height = '200px'
-    video.style.left = '10%'
     call.on('stream', userVideoStream => { //when new user, add their video
         addVideoStream(video, userVideoStream)
 
