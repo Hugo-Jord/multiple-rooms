@@ -28,6 +28,9 @@ navigator.mediaDevices.getUserMedia({
         call.answer(stream)
 
         var video = document.createElement('video')
+        video.style.width = '200px';
+        video.style.height = '200px';
+        
         call.on('stream', userVideoStream => {
             addVideoStream(video, userVideoStream)
         })
@@ -61,8 +64,11 @@ myPeer.on('open', id => {
 
 function connectToNewUser(userId, stream) {
     const call = myPeer.call(userId, stream)
-    console.log("wtf")
+
     const video = document.createElement('video')
+    video.style.width = '200px'
+    video.style.height = '200px'
+
     call.on('stream', userVideoStream => { //when new user, add their video
         addVideoStream(video, userVideoStream)
 
