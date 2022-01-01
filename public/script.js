@@ -53,6 +53,9 @@ socket.on('user-disconnected', userId => {
     if(peers[1]){
         peers_vids[1].remove();
         peers[1].close();
+        myVideo.style.width = '350px'
+        myVideo.style.height = '640px'
+        myVideo.style.left = '0%'
     }
 })
 
