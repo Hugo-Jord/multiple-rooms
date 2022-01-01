@@ -44,14 +44,21 @@
             position: absolute;
         }
         
+        .btn{
+            left: 0; 
+            right: 0; 
+            top: 642px;
+            margin-left: auto; 
+            margin-right: auto; 
+        }
         
     </style>
 </head>
 <body>
     <div id="container">
         <div id="video-grid"></div>
-        <button id="pause" type="button" onclick="pauseVideo()" style="display: block; top: 0%; left: 0%; position: absolute;">Pause</button>
-        <button id="unpause" type="button" onclick="unpauseVideo()" style="display: none; top: 0%; left: 0%; position: absolute;">Resume</button>
+        <button class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block; top: 0%; left: 0%; position: absolute;">Pause</button>
+        <button class="btn" id="unpause" type="button" onclick="unpauseVideo()" style="display: none; top: 0%; left: 0%; position: absolute;">Resume</button>
     </div>
 </body>
 </html>
