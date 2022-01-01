@@ -13,28 +13,28 @@
     <title>Document</title>
     <style>
 
-        body{
+        .container{
             position: relative;
         }
-
-        /*.video-grid{
+        
+        .video-grid{
             /*display: inline-block;
             grid-template-columns: repeat(auto-fill, 300px);
-            grid-auto-rows: 300px;
-            position: relative;
-        }*/
+            grid-auto-rows: 300px;*/
+            position: absolute;
+        }
 
         video {
-            width: 350px;
-            height: 640px; 
+            min-width: 350px;
+            min-height: 640px; 
             margin-top: -320px; 
             margin-left: -175px; 
             top: 50%;
             left: 50%; 
             object-fit: cover;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            /*margin-left: auto;
+            margin-right: auto;*/
             position: absolute;
         }
         
@@ -42,8 +42,10 @@
     </style>
 </head>
 <body>
-    <div id="video-grid"></div>
-    <button id="pause" type="button" onclick="pauseVideo()" style="display: block; top: 0%; left: 0%; position: absolute;">Pause</button>
-    <button id="unpause" type="button" onclick="unpauseVideo()" style="display: none; top: 0%; left: 0%; position: absolute;">Resume</button>
+    <div id="container">
+        <div id="video-grid"></div>
+        <button id="pause" type="button" onclick="pauseVideo()" style="display: block; top: 0%; left: 0%; position: absolute;">Pause</button>
+        <button id="unpause" type="button" onclick="unpauseVideo()" style="display: none; top: 0%; left: 0%; position: absolute;">Resume</button>
+    </div>
 </body>
 </html>
