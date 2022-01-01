@@ -102,7 +102,7 @@ function pauseVideo(){
     button.style.display = 'none'
 
     const button2 = document.getElementById('unpause')
-    button2.style.display = 'inline-block'
+    button2.style.display = 'block'
 }
 
 //pausing the peers video stream if it clicked on pause
@@ -124,7 +124,7 @@ function unpauseVideo(){
     button.style.display = 'none'
 
     const button2 = document.getElementById('pause')
-    button2.style.display = 'inline-block'
+    button2.style.display = 'block'
 }
 
 //unpausing the peers video stream if it clicked on pause
