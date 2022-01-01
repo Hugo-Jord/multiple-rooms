@@ -77,6 +77,9 @@ function connectToNewUser(userId, stream) {
     })
     call.on('close', () => { //if user leaves, close video
         video.remove()
+        myVideo.style.width = '200px'
+        myVideo.style.height = '200px'
+        myVideo.style.left = '10%'
     })
 
     peers[userId] = call
