@@ -16,6 +16,7 @@ myVideo.muted = true //muting our audio to ourselves
 myVideo.style.width = '200px'
 myVideo.style.height = '200px'
 myVideo.style.left = '10%'
+myVideo.style.zIndex = '2'
 
 const peers = {}
 const peers_vids = {}
