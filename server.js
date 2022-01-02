@@ -20,11 +20,6 @@ app.get('/:room', (req, res)  => {
     res.render('room', { roomId: req.params.room })
 })
 
-//chat
-app.get('/chat/chat', (req, res) => {
-    res.render('views/chat/chat.html');
-});
-
 //to run every time someone connects to the webpage
 io.on('connection', socket => {
     socket.on('join-room', (roomId, userId) => {
@@ -44,6 +39,15 @@ io.on('connection', socket => {
 
         socket.on('disconnect', () => {
             socket.to(roomId).emit('user-disconnected', userId)
+        })
+
+        socket.on('goto-chat', () => {
+            //chat
+            app.set('view engine','html');
+            app.get('/chat/chat', (req, res) => {
+                res.render('views/chat/chat.html');
+            });
+
         })
 
     })
