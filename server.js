@@ -41,15 +41,6 @@ io.on('connection', socket => {
             socket.to(roomId).emit('user-disconnected', userId)
         })
 
-        socket.on('goto-chat', () => {
-            //chat
-            app.set('view engine','html');
-            app.get('/', (req, res) => {
-                res.render('views/chat/chat.html');
-            });
-
-        })
-
     })
 
     
