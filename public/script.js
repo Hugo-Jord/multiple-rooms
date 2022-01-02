@@ -144,5 +144,5 @@ socket.on('peer-unpaused', user => {
 })
 
 function gotoChat(){
-    socket.emit('goto-chat')
+    location.replace("https://www.w3schools.com")
 }
