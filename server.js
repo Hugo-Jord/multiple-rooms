@@ -44,7 +44,7 @@ io.on('connection', socket => {
         socket.on('goto-chat', () => {
             //chat
             app.set('view engine','html');
-            app.get('/chat/chat', (req, res) => {
+            app.get('/', (req, res) => {
                 res.render('views/chat/chat.html');
             });
 
