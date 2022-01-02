@@ -20,6 +20,11 @@ app.get('/:room', (req, res)  => {
     res.render('room', { roomId: req.params.room })
 })
 
+//chat
+app.get('/chat', (req, res) => {
+    res.render('views/chat/chat.html');
+});
+
 //to run every time someone connects to the webpage
 io.on('connection', socket => {
     socket.on('join-room', (roomId, userId) => {
@@ -41,19 +46,6 @@ io.on('connection', socket => {
             socket.to(roomId).emit('user-disconnected', userId)
         })
 
-        //chat
-        //redirect user to a room
-        socket.on('goto-chat', () => {
-            console.log("wtf")
-            app.get('/', (req, res)  => {
-                res.redirect(`/chat/${uuidV4()}`)
-            })
-            
-            //create a brand new room for user
-            app.get('/:room', (req, res)  => {
-                res.render('room', { roomId: req.params.room })
-            })
-        })
     })
 
     
