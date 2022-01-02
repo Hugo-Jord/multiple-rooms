@@ -21,7 +21,7 @@ app.get('/:room', (req, res)  => {
 })
 
 //chat
-app.get('/chat', (req, res) => {
+app.get('/chat/chat.html', (req, res) => {
     res.render('views/chat/chat.html');
 });
 
