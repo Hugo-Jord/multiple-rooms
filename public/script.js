@@ -99,6 +99,7 @@ function addVideoStream(video, stream){
 }
 
 function gotoChat(){
+    console.log("here")
     socket.emit('goto-chat')
 }
 

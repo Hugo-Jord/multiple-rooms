@@ -45,6 +45,7 @@ io.on('connection', socket => {
     //chat
     //redirect user to a room
     socket.on('goto-chat', () => {
+        console.log("wtf")
         app.get('/', (req, res)  => {
             res.redirect(`/chat/${uuidV4()}`)
         })
