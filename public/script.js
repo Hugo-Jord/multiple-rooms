@@ -142,3 +142,7 @@ socket.on('peer-unpaused', user => {
         peers_vids[1].play();
     }
 })
+
+function gotoChat(){
+    socket.emit('goto-chat')
+}
