@@ -144,5 +144,5 @@ socket.on('peer-unpaused', user => {
 })
 
 function gotoChat(){
-    location.replace("https://www.w3schools.com")
+    location.replace("https://radiant-forest-87782.herokuapp.com")
 }
