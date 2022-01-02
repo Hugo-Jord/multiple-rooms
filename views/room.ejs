@@ -49,6 +49,10 @@
             cursor: pointer;
             z-index: 2;
         }
+
+        #chat{
+            top: 50px;
+        }
         
     </style>
 </head>
@@ -60,7 +64,13 @@
         </button>
         <button class="btn" id="unpause" type="button" onclick="unpauseVideo()" style="display: none;">
             <img src="https://icon-library.com/images/white-play-icon-png/white-play-icon-png-27.jpg" height="50px" width="50px"/>
-        </button>
+        </button>     
+        
+        <form action="chat.ejs">
+            <button class="btn" id="chat">
+                <img src="https://cdn-icons-png.flaticon.com/512/1380/1380370.png" height="50px" width="50px"/>
+            </button>
+        </form>
     </div>
 </body>
 </html>
