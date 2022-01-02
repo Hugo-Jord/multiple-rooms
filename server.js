@@ -41,6 +41,20 @@ io.on('connection', socket => {
             socket.to(roomId).emit('user-disconnected', userId)
         })
     })
+
+    //chat
+    //redirect user to a room
+    socket.on('goto-chat', () => {
+        app.get('/', (req, res)  => {
+            res.redirect(`/chat/${uuidV4()}`)
+        })
+        
+        //create a brand new room for user
+        app.get('/:room', (req, res)  => {
+            res.render('room', { roomId: req.params.room })
+        })
+    })
+    
 })
 
 //make server in port 3000

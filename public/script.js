@@ -98,6 +98,9 @@ function addVideoStream(video, stream){
     videoGrid.append(video)
 }
 
+function gotoChat(){
+    socket.emit('goto-chat')
+}
 
 //pausing the video stream
 function pauseVideo(){
