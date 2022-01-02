@@ -40,21 +40,23 @@ io.on('connection', socket => {
         socket.on('disconnect', () => {
             socket.to(roomId).emit('user-disconnected', userId)
         })
+
+        //chat
+        //redirect user to a room
+        socket.on('goto-chat', () => {
+            console.log("wtf")
+            app.get('/', (req, res)  => {
+                res.redirect(`/chat/${uuidV4()}`)
+            })
+            
+            //create a brand new room for user
+            app.get('/:room', (req, res)  => {
+                res.render('room', { roomId: req.params.room })
+            })
+        })
     })
 
-    //chat
-    //redirect user to a room
-    socket.on('goto-chat', () => {
-        console.log("wtf")
-        app.get('/', (req, res)  => {
-            res.redirect(`/chat/${uuidV4()}`)
-        })
-        
-        //create a brand new room for user
-        app.get('/:room', (req, res)  => {
-            res.render('room', { roomId: req.params.room })
-        })
-    })
+    
     
 })
 
