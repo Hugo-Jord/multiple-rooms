@@ -150,7 +150,6 @@ function gotoChat(){
 //photo
 const img = document.createElement('img')
 const files = document.querySelector('#file');
-const uploadBtn = document.querySelector('#uploadbtn');
 
 files.addEventListener('change', function() {
     const chosenFile = this.files[0];
