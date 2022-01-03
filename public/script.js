@@ -149,7 +149,8 @@ function gotoChat(){
 
 //photo
 const img = document.createElement('img')
-const files = document.querySelector('#file');
+const files = document.querySelector('#file')
+const container = document.getElementById("container")
 
 files.addEventListener('change', function() {
     const chosenFile = this.files[0];
@@ -161,4 +162,5 @@ files.addEventListener('change', function() {
         });
         reader.readAsDataURL(chosenFile);
     }
+    container.appendChild(img)
 });
