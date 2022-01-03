@@ -148,19 +148,18 @@ function gotoChat(){
 }
 
 //photo
-const imgDiv = document.querySelector('.change_photo');
-const img = document.querySelector('#photo');
-const file = document.querySelector('#file');
+const img = document.createElement('img')
+const files = document.querySelector('#file');
 const uploadBtn = document.querySelector('#uploadbtn');
 
-file.addEventListener('change', function() {
-    const choosedFile = this.files[0];
+files.addEventListener('change', function() {
+    const chosenFile = this.files[0];
 
-    if(choosedFile) {
+    if(chosenFile) {
         const reader = new FileReader();
         reader.addEventListener('load', function() {
             img.setAttribute('src', reader.result);
         });
-        reader.readAsDataURL(choosedFile);
+        reader.readAsDataURL(chosenFile);
     }
 });
