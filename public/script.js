@@ -164,9 +164,12 @@ files.addEventListener('change', function() {
     }
     img.style.width="280px";
     img.style.height="280px";
-    img.style.textAlign="center";
+    img.style.left="0"; 
+    img.style.right= "0"; 
+    img.style.marginLeft= "auto"; 
+    img.style.marginRight= "auto";
     container.appendChild(img)
-    container.style.display = "block";
+    container.style.display = "inline-block";
 });
 
 function hide(){
