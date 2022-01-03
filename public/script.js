@@ -153,6 +153,8 @@ const files = document.querySelector('#file')
 const container = document.getElementById("photo-container")
 
 files.addEventListener('change', function() {
+    pause();
+
     const chosenFile = this.files[0];
 
     if(chosenFile) {
@@ -174,5 +176,13 @@ files.addEventListener('change', function() {
 });
 
 function hide(){
+    unpause();
+    
+    container.style.display = "none";
+}
+
+function sendToFirebase(){
+    //send to firebase code 
+    //...
     container.style.display = "none";
 }

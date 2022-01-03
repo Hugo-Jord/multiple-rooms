@@ -14,15 +14,12 @@
     <style>
 
         #container{
-            top: 0;
-            left: 0;
             position: relative;
         }
         
         #photo-container{
             background-color: #FFFFFF;
             position: absolute;
-            top: 50%;
             left: 0; 
             right: 0; 
             margin-left: auto; 
@@ -103,7 +100,7 @@
         <div id="photo-container">
             <p style="text-align: center;">Deseja guardar a foto?</p>
             <div id="div-buttons" style="text-align: center;">
-                <button id="yes" onclick="hide()">Sim</button>
+                <button id="yes" onclick="sendToFirebase()">Sim</button>
                 <button id="no" onclick="hide()">Não</button>
             </div> 
             <p></p>
