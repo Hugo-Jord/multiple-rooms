@@ -146,3 +146,21 @@ socket.on('peer-unpaused', user => {
 function gotoChat(){
     location.replace("https://radiant-forest-87782.herokuapp.com")
 }
+
+//photo
+const imgDiv = document.querySelector('.change_photo');
+const img = document.querySelector('#photo');
+const file = document.querySelector('#file');
+const uploadBtn = document.querySelector('#uploadbtn');
+
+file.addEventListener('change', function() {
+    const choosedFile = this.files[0];
+
+    if(choosedFile) {
+        const reader = new FileReader();
+        reader.addEventListener('load', function() {
+            img.setAttribute('src', reader.result);
+        });
+        reader.readAsDataURL(choosedFile);
+    }
+});
