@@ -162,8 +162,9 @@ files.addEventListener('change', function() {
         });
         reader.readAsDataURL(chosenFile);
     }
-    img.style.width="200px";
-    img.style.height="200px";
+    img.style.width="280px";
+    img.style.height="280px";
+    img.style.textAlign="center";
     container.appendChild(img)
     container.style.display = "block";
 });
