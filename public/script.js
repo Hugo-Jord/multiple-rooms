@@ -162,6 +162,8 @@ files.addEventListener('change', function() {
         });
         reader.readAsDataURL(chosenFile);
     }
+    img.style.width="200px";
+    img.style.height="200px";
     container.appendChild(img)
     container.style.display = "block";
 });
