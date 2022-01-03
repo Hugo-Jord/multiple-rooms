@@ -37,14 +37,15 @@ io.on('connection', socket => {
             socket.to(roomId).emit('peer-unpaused', user)
         })
 
+        socket.on('new-photo-added', () => {
+            socket.to(roomId).emit('peer-sent-photo')
+        })  
+
         socket.on('disconnect', () => {
             socket.to(roomId).emit('user-disconnected', userId)
         })
 
     })
-
-    
-    
 })
 
 //make server in port 3000

@@ -177,8 +177,19 @@ function hide(){
     container.style.display = "none";
 }
 
+socket.on('peer-sent-photo', () => {
+    const alert = document.getElementById("photo-alert")
+    alert.style.display = "block"
+})
+
 function sendToFirebase(){
     //send to firebase code 
     //...
     container.style.display = "none";
+    socket.emit("new-photo-added")
+}
+
+function closeAlert(){
+    const alert = document.getElementById("photo-alert")
+    alert.style.display = "none";
 }
