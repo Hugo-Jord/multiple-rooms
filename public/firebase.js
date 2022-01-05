@@ -46,13 +46,13 @@ files.addEventListener('change', function() {
 //Now it shall be uploaded to storage
 document.getElementById("yes").addEventListener("click", sendToStorage);
 function sendToStorage() {
+  const room = document.getElementsByClassName("tbd")[0]
   var image = fileToUpload
-  //console.log(image)
-  //console.log(image.name)
+
   const metadata = {
     contentType: image.type
   }
   
-  var storage_ref = sRef(storage, "Images/"+image.name)
+  var storage_ref = sRef(storage, "Images/"+room.id+"/"+image.name)
   var task = uploadBytesResumable(storage_ref, image, metadata)
 }

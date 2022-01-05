@@ -149,6 +149,8 @@ function gotoChat(){
 
 //photo functions
 const container = document.getElementById("photo-container")
+const tbd = document.getElementsByClassName("tbd")[0]
+tbd.setAttribute("id", String(ROOM_ID));
 
 function hide(){
     container.style.display = "none";
