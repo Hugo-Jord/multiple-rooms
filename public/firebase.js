@@ -18,7 +18,7 @@ const storage = getStorage(app)
 //Now it shall be uploaded to storage
 document.getElementById("yes").addEventListener("click", sendToStorage);
 function sendToStorage() {
-  const image = document.getElementById("imageToUpload");
+  const image = document.getElementById("file");
   console.log(image)
   console.log(image.name)
   //const storage_ref = sRef(storage, "Images/")

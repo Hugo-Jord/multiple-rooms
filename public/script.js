@@ -160,7 +160,6 @@ files.addEventListener('change', function() {
             img.setAttribute('src', reader.result);
         });
         reader.readAsDataURL(chosenFile);
-        console.log(chosenFile);
     }
     img.style.width="280px";
     img.style.height="280px";
