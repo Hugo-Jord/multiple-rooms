@@ -1,4 +1,3 @@
-import { storage } from "./firebase/index.js";
 
 //to run port 3001 do Set-ExecutionPolicy RemoteSigned on windows powershell
 //when done do Set-ExecutionPolicy Restricted
