@@ -146,8 +146,9 @@ function gotoChat(){
     location.replace("https://radiant-forest-87782.herokuapp.com")
 }
 
-//photo
 
+//photo
+const container = document.getElementById("photo-container")
 
 function hide(){
     container.style.display = "none";
