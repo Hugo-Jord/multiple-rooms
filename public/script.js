@@ -1,6 +1,6 @@
 //Firebase configuration
 import firebase from "firebase/app"
-import "firebase/storage"
+require("firebase/storage")
 const firebaseConfig = {
     apiKey: "AIzaSyAMNRdeSeupmt3q-pfRJ6slzQZsMDwwKT0",
     authDomain: "passenger-95dd3.firebaseapp.com",
