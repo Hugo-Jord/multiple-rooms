@@ -13,4 +13,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const storage = getStorage(app)
-export { storage, app }
+
+//Event listener when photo is taken
+//Now it shall be uploaded to storage
+document.getElementById("yes").addEventListener("click", sendToStorage);
+function sendToStorage() {
+  const image = document.getElementById("imageToUpload");
+  console.log(image)
+}

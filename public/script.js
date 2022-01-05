@@ -185,10 +185,6 @@ socket.on('peer-sent-photo', () => {
 function sendToFirebase(){
     //send to firebase code 
     //...
-    const image = document.getElementById("imageToUpload");
-    console.log(image)
-
-
     container.style.display = "none";
     socket.emit("new-photo-added")
 }
