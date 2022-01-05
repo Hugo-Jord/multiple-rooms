@@ -20,4 +20,6 @@ document.getElementById("yes").addEventListener("click", sendToStorage);
 function sendToStorage() {
   const image = document.getElementById("imageToUpload");
   console.log(image)
+  console.log(image.name)
+  //const storage_ref = sRef(storage, "Images/")
 }
