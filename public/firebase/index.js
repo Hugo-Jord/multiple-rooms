@@ -1,6 +1,6 @@
 //Firebase configuration
-import firebase from "firebase/app"
-import "firebase/storage"
+import firebase from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
 const firebaseConfig = {
     apiKey: "AIzaSyAMNRdeSeupmt3q-pfRJ6slzQZsMDwwKT0",
     authDomain: "passenger-95dd3.firebaseapp.com",
