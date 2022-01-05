@@ -162,6 +162,7 @@ socket.on('peer-sent-photo', () => {
 function sendToFirebase(){
     //image is sent to firebase storage inside with firebase.js
 
+    container.style.display = "none";
     const confirm = document.getElementById("photo-confirm")
     confirm.style.display = "block"
 
