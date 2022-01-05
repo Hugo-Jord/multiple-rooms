@@ -160,13 +160,20 @@ socket.on('peer-sent-photo', () => {
 })
 
 function sendToFirebase(){
-    //send to firebase code 
-    //... (code in firebase.js)
-    container.style.display = "none";
+    //image is sent to firebase storage inside with firebase.js
+
+    const confirm = document.getElementById("photo-confirm")
+    confirm.style.display = "block"
+
     socket.emit("new-photo-added")
 }
 
 function closeAlert(){
     const alert = document.getElementById("photo-alert")
     alert.style.display = "none";
+}
+
+function closeConfirm(){
+    const confirm = document.getElementById("photo-confirm")
+    confirm.style.display = "none";
 }

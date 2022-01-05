@@ -47,6 +47,19 @@
             border-radius: 20px;
         }
 
+        #photo-confirm{
+            background-color: #FFFFFF;
+            position: absolute;
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto;
+            width: 300px;
+            display: none;
+            z-index: 3;
+            border-radius: 20px;
+        }
+
         #video-grid{
             /*display: inline-block;
             grid-template-columns: repeat(auto-fill, 300px);
@@ -125,6 +138,13 @@
                 <img height="20px" width="20px" src="https://cdn-icons-png.flaticon.com/512/75/75519.png"/>
             </button>
             <p style="text-align: center;">O seu amigo enviou uma nova foto para o mapa!</p>
+        </div>
+
+        <div id="photo-confirm">
+            <button id="close" onclick="closeConfirm()">
+                <img height="20px" width="20px" src="https://cdn-icons-png.flaticon.com/512/75/75519.png"/>
+            </button>
+            <p style="text-align: center;">Foto enviada para o mapa!</p>
         </div>
     </div>
 </body>
