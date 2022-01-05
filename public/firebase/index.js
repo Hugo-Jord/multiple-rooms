@@ -1,6 +1,6 @@
 //Firebase configuration
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
+import {storage} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
 const firebaseConfig = {
     apiKey: "AIzaSyAMNRdeSeupmt3q-pfRJ6slzQZsMDwwKT0",
     authDomain: "passenger-95dd3.firebaseapp.com",
@@ -12,5 +12,4 @@ const firebaseConfig = {
   };
 
 const app = initializeApp(firebaseConfig)
-const storage = app.storage()
 export { storage, app }
