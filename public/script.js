@@ -1,4 +1,4 @@
-import {storage} from "./firebase"
+import {storage} from "./firebase.js"
 
 //to run port 3001 do Set-ExecutionPolicy RemoteSigned on windows powershell
 //when done do Set-ExecutionPolicy Restricted
