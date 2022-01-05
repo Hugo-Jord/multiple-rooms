@@ -147,7 +147,7 @@ function gotoChat(){
 }
 
 
-//photo
+//photo functions
 const container = document.getElementById("photo-container")
 
 function hide(){
@@ -161,7 +161,7 @@ socket.on('peer-sent-photo', () => {
 
 function sendToFirebase(){
     //send to firebase code 
-    //...
+    //... (code in firebase.js)
     container.style.display = "none";
     socket.emit("new-photo-added")
 }

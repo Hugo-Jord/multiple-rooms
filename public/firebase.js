@@ -46,8 +46,10 @@ files.addEventListener('change', function() {
 //Now it shall be uploaded to storage
 document.getElementById("yes").addEventListener("click", sendToStorage);
 function sendToStorage() {
-  const image = fileToUpload
-  console.log(image)
-  console.log(image.name)
-  //const storage_ref = sRef(storage, "Images/")
+  var image = fileToUpload
+  //console.log(image)
+  //console.log(image.name)
+  
+  var storage_ref = sRef(storage, "Images/"+image.name)
+  var task = storage_ref.put(image)
 }
