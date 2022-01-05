@@ -49,7 +49,10 @@ function sendToStorage() {
   var image = fileToUpload
   //console.log(image)
   //console.log(image.name)
+  const metadata = {
+    contentType: image.type
+  }
   
   var storage_ref = sRef(storage, "Images/"+image.name)
-  var task = storage_ref.put(image)
+  var task = uploadBytesResumable(storage_ref, image, metadata)
 }
