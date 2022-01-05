@@ -1,3 +1,4 @@
+import {storage} from "./firebase"
 
 //to run port 3001 do Set-ExecutionPolicy RemoteSigned on windows powershell
 //when done do Set-ExecutionPolicy Restricted
@@ -186,7 +187,6 @@ socket.on('peer-sent-photo', () => {
 function sendToFirebase(){
     //send to firebase code 
     //...
-    const storage = import('storage')
     const image = document.getElementById("imageToUpload");
     console.log(image)
 
