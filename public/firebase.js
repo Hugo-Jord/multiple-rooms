@@ -1,6 +1,7 @@
 //Firebase configuration
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 import {getStorage, ref as sRef, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
+import {getFirestore, doc, getDoc, setDoc, collection, addDoc} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 const firebaseConfig = {
     apiKey: "AIzaSyAMNRdeSeupmt3q-pfRJ6slzQZsMDwwKT0",
     authDomain: "passenger-95dd3.firebaseapp.com",
@@ -13,6 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const storage = getStorage(app)
+const firestore = getFirestore(app)
 
 //Event listener when photo is taken
 const img = document.createElement('img')
@@ -65,7 +67,19 @@ function sendToStorage() {
   () => {
     getDownloadURL(task.snapshot.ref).then((downloadURL) => {
       console.log(downloadURL)
+      saveURLtoFirestore(downloadURL)
     })
+  })
+
+}
+
+//Upload reference to firestore database
+async function saveURLtoFirestore(url){
+  var ref = doc(firestore, "ImageLinks/"+fileToUpload.name)
+
+  await setDoc(ref, {
+    ImageName: fileToUpload.name,
+    ImageUrl: url
   })
 
 }
