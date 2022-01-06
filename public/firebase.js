@@ -56,7 +56,13 @@ function sendToStorage() {
   var storage_ref = sRef(storage, "Images/"+room.id+"/"+image.name)
   var task = uploadBytesResumable(storage_ref, image, metadata)
 
-  task.on('state-changed', () => {
+  task.on('state-changed', (snapshot)=>{
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+  },
+  (error)=>{
+    alert("error: image not uploaded");
+  },
+  () => {
     getDownloadURL(task.snapshot.ref).then((downloadURL) => {
       console.log(downloadURL)
     })
