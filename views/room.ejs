@@ -98,7 +98,7 @@
             outline: inherit;
             
         }
-        #pause, #unpause, #chat, #photo{
+        #img_pause, #img_unpause, #img_chat, #img_photo{
             box-shadow: 0px 4px 5px rgba(24, 24, 24, 0.3);
         }
         #chat{
@@ -119,20 +119,20 @@
     <div id="container">
         <div id="video-grid"></div>
         <button class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block;">
-            <img src="img/pause.png" height="50px" width="auto"/>
+            <img src="img/pause.png" id="img_pause" height="50px" width="auto"/>
         </button>
         <button class="btn" id="unpause" type="button" onclick="unpauseVideo()" style="display: none;">
-            <img src="img/play.png" height="50px" width="auto"/>
+            <img src="img/play.png" id="img_unpause" height="50px" width="auto"/>
         </button>     
         
         <button class="btn" id="chat" onclick="gotoChat()">
-            <img src="img/chat.png" height="50px" width="auto"/>
+            <img src="img/chat.png" id="img_chat" height="50px" width="auto"/>
         </button>
 
         <button class="btn" id="photo">
             <input type="file" name="" id="file" accept="image/*" style="display: none;">
             <label for="file" id="uploadbtn">
-                <img width="auto" height="50px" src="img/camera.png"/>
+                <img width="auto" height="50px" id="img_photo" src="img/camera.png"/>
             </label>
         </button>
 
