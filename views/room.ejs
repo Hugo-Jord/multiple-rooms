@@ -71,6 +71,9 @@
             position: absolute;
             background-color: blue;
         }
+        #video-grid button{
+            display: inline;
+        }
 
         video {
             width: 350px;
@@ -120,7 +123,7 @@
     <div id="container">
         <div id="video-grid"></div>
         <button class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block;">
-            <img src="img/pause.png" id="img_pause" height="100px" width="auto"/>
+            <img src="img/pause.png" id="img_pause" height="50px" width="auto"/>
         </button>
         <button class="btn" id="unpause" type="button" onclick="unpauseVideo()" style="display: none;">
             <img src="img/play.png" id="img_unpause" height="50px" width="auto"/>
