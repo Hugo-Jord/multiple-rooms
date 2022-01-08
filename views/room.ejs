@@ -71,12 +71,7 @@
             position: absolute;
             background-color: blue;
         }
-       .botoes{
-           top:50%;
-           width: 50%;
-           height: 50%;
-       }
-
+       
         video {
             width: 350px;
             height: 640px;
@@ -108,7 +103,8 @@
             border-radius: 50%;
         }
         #chat{
-            top: 70px; 
+            top: 200px; 
+            left: 20%;
         }
         
         #photo{
@@ -124,7 +120,7 @@
 <body>
     <div id="container">
         <div id="video-grid"></div>
-        <div class="botoes">
+        
         <button class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block;">
             <img src="img/pause.png" id="img_pause" height="50px" width="auto"/>
         </button>
@@ -135,7 +131,7 @@
         <button class="btn" id="chat" onclick="gotoChat()">
             <img src="img/chat.png" id="img_chat" height="50px" width="auto"/>
         </button>
-     </div>
+   
         <button class="btn" id="photo">
             <input type="file" name="" id="file" accept="image/*" style="display: none;">
             <label for="file" id="uploadbtn">
