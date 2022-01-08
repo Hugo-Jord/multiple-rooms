@@ -1,3 +1,18 @@
+window.onload = function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+};
+let lat;
+let long;
+// coordenadas da posição atual do utilizador
+function showPosition(position) {
+  lat = position.coords.latitude;
+  long = position.coords.longitude;
+}
+
 //Firebase configuration
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 import {getStorage, ref as sRef, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
@@ -79,7 +94,9 @@ async function saveURLtoFirestore(url){
 
   await setDoc(ref, {
     ImageName: fileToUpload.name,
-    ImageUrl: url
+    ImageUrl: url,
+    lat: lat,
+    long: long
   })
 
 }
