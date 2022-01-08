@@ -71,9 +71,9 @@
             position: absolute;
             background-color: blue;
         }
-        #video-grid button{
-            top:50%;
-        }
+       .butoes{
+           top:50%;
+       }
 
         video {
             width: 350px;
@@ -122,6 +122,7 @@
 <body>
     <div id="container">
         <div id="video-grid"></div>
+        <div class="botoes">
         <button class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block;">
             <img src="img/pause.png" id="img_pause" height="50px" width="auto"/>
         </button>
@@ -132,7 +133,7 @@
         <button class="btn" id="chat" onclick="gotoChat()">
             <img src="img/chat.png" id="img_chat" height="50px" width="auto"/>
         </button>
-
+     </div>
         <button class="btn" id="photo">
             <input type="file" name="" id="file" accept="image/*" style="display: none;">
             <label for="file" id="uploadbtn">
