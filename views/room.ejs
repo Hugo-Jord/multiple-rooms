@@ -120,16 +120,16 @@
 <body>
     <div id="container">
         <div id="video-grid"></div>
-        <a class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block;">
-            <img src="img/pause.png" height="40px" width="auto"/>
-        </a>
-        <a class="btn" id="unpause" type="button" onclick="unpauseVideo()" style="display: none;">
+        <button class="btn" id="pause" type="button" onclick="pauseVideo()" style="display: block;">
+            <img src="public/img/pause.png" height="40px" width="auto"/>
+        </button>
+        <button class="btn" id="unpause" type="button" onclick="unpauseVideo()" style="display: none;">
             <img src="img/play.png" height="40px" width="auto"/>
-        </a>     
+        </button>     
         
-        <a class="btn" id="chat" onclick="gotoChat()">
+        <button class="btn" id="chat" onclick="gotoChat()">
             <img src="img/chat.png" height="40px" width="auto"/>
-        </a>
+        </button>
 
         <button class="btn" id="photo">
             <input type="file" name="" id="file" accept="image/*" style="display: none;">
