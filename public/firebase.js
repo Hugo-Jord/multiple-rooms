@@ -95,8 +95,8 @@ async function saveURLtoFirestore(url){
   await setDoc(ref, {
     ImageName: fileToUpload.name,
     ImageUrl: url,
-    lat: lat,
-    long: long
+    Imglat: lat,
+    Imglong: long
   })
 
 }
